@@ -5,10 +5,10 @@ Note By default, Apache configuration on Mac OS X serves files from /Library/Web
 
 ## Table of Contents
 
-* [Edit apache conf](#Conf)
+* [Edit apache conf](#Edit apache conf)
 * [Debug](#Debug)
 
-## Conf
+## Edit apache conf
 
 1) Make you super user:
 ```
