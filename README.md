@@ -5,8 +5,8 @@ Note By default, Apache configuration on Mac OS X serves files from /Library/Web
 
 ## Table of Contents
 
-* [Edit apache conf](#Edit apache conf)
-* [Debug](#Debug)
+* [Edit apache conf](#edit)
+* [Debug](#debug)
 
 ## Edit apache conf
 
