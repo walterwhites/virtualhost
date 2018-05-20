@@ -3,6 +3,13 @@ configuration apache virtualhosts
 
 Note By default, Apache configuration on Mac OS X serves files from /Library/WebServer/Documents for localhost
 
+## Table of Contents
+
+* [Edit apache conf](#Edit apache conf)
+* [Debug](#Debug)
+
+## Edit apache conf
+
 1) Make you super user:
 ```
 sudo su
@@ -89,10 +96,33 @@ Below, the command to run from /etc/apache2 to change default dir "Library/WebSe
 LC_CTYPE=C && LANG=C && find * -type f -exec sed -i "" "s#/Library/WebServer/Documents#/Users/(your_username)/workspace/Sites#g" {} +
 ```
 
+## Debug
 Sometimes we should kill httpd to reload server:
 ```
 sudo apachectl stop  
 sudo killall httpd
 sudo apachectl start  
 sudo dscacheutil -flushcache
+```
+
+To fix Error 403:
+
+1) change Rights on folder of you (To make readable by Apache)
+```
+chmod a+rx  /var/www/your_folder
+chmod a+r /var/www/votre-dossier/your_folder
+```
+
+2) add index.html file
+```
+cd /var/www/your_folder
+nano index.html
+Hello word
+```
+
+3) add Options +Indexes on .htaccess
+```
+cd /var/www/your_folder
+nano .htaccess
+Options +Indexes
 ```
