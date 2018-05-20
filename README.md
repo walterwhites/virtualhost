@@ -88,3 +88,11 @@ Below, the command to run from /etc/apache2 to change default dir "Library/WebSe
 ```
 LC_CTYPE=C && LANG=C && find * -type f -exec sed -i "" "s#/Library/WebServer/Documents#/Users/(your_username)/workspace/Sites#g" {} +
 ```
+
+Sometimes we should kill httpd to reload server:
+```
+sudo apachectl stop  
+sudo killall httpd
+sudo apachectl start  
+sudo dscacheutil -flushcache
+```
