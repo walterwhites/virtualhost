@@ -8,7 +8,7 @@ Note By default, Apache configuration on Mac OS X serves files from /Library/Web
 * [Conf](#conf)
 * [Debug](#debug)
 
-## Edit apache conf
+## Conf
 
 1) Make you super user:
 ```
