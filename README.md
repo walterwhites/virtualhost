@@ -100,6 +100,10 @@ LC_CTYPE=C && LANG=C && find * -type f -exec sed -i "" "s#/Library/WebServer/Doc
 Sometimes we should kill httpd to reload server:
 ```
 sudo apachectl stop  
+OR
+sudo /usr/sbin/apachectl stop
+
+AND
 sudo killall httpd
 sudo apachectl start  
 sudo dscacheutil -flushcache
